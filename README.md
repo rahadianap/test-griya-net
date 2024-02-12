@@ -33,7 +33,7 @@ Jalankan perintah berikut untuk generate encryption key.
 Konfigurasi .env file yang sudah dibuat tadi, masukkan pengaturan database sesuai dengan yang sudah dibuat.
 
 ## 10. Database migration.
-Jalankan perintah berikut untuk menjalankan migration (create table).
+Jalankan perintah berikut untuk menjalankan migration (create table) atau import file .sql yang tersedia.
 
 `php artisan migrate`
 
@@ -45,51 +45,25 @@ Untuk menjalankan service, cukup ketikkan perintah berikut.
 # Fitur
 ## 1. Admin
 ### 1.1 Create Paket Penjualan
-Paste url berikut untuk mendaftarkan user agar bisa mengakses data yang dibutuhkan. Data yang dibutuhkan adalah `name`, `email`, `password`, dan `password_confirmation`. Isikan data tersebut ke dalam `body`.
 
-`http://localhost:8000/api/register`
+![alt text](https://github.com/rahadianap/test-griya-net/blob/main/create_paket_penjualan.png?raw=true)
 
-Jika berhasil, response yang didapat adalah
+### 1.2 Create Akun Sales
 
-```json
-{
-    "success": true,
-    "token": "5|YJ3LGpSoq***************************************"
-}
-```
+![alt text](https://github.com/rahadianap/test-griya-net/blob/main/create_sales.png?raw=true)
 
-### 1.2 Login user
-Untuk mengakses data, user harus melakukan login ke dalam service. Ketikkan url berikut
+### 1.3 Export PDF
 
-`http://localhost:8000/api/login`
+![alt text](https://github.com/rahadianap/test-griya-net/blob/main/export_pdf.png?raw=true)
 
-Jika berhasil, response yang didapat sebagai berikut
+### 1.4 Verify Customer
 
-```json
-{
-    "success": true,
-    "token": "6|SOsxoWF5M***************************************"
-}
-```
+![alt text](https://github.com/rahadianap/test-griya-net/blob/main/verify_customer.png?raw=true)
 
-Token yang didapat setelah melakukan login, akan digunakan untuk autentikasi user.
+## 2. Sales
+### 2.1 Create Customer
 
-### 1.3 Akses data
-Untuk mengetahui apakah aplikasi berhasil dijalankan, coba paste url berikut ke postman. Jangan lupa untuk menambahkan token yang sudah diperoleh melalui proses login. Di tab `Authorization`, pilih `Bearer Token` dan isikan token yang sudah didapat pada kolom `Token`.
+![alt text](https://github.com/rahadianap/test-griya-net/blob/main/create_customer.png?raw=true)
 
-![alt text](https://github.com/rahadianap/test-dot-indonesia/blob/sprint1/Screenshot.png?raw=true)
-
-`http://localhost:8000/api/search/provinces?id=1`
-
-Jika berhasil, response yang didapat sebagai berikut
-
-```json
-{
-    "success": true,
-    "message": "Data Retrieved Successfully",
-    "data": {
-        "province_id": "1",
-        "province": "Bali"
-    }
-}
-```
+# Initial Data
+Untuk login, bisa menggunakan `name: admin` `password: admin123` (Jika sudah import .sql file).
