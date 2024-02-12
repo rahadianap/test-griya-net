@@ -27,8 +27,8 @@
         </Modal>
         <Modal :show="openingModal" @close="closeModal" :isUpdate=false>
             <div class="p-6">
-                <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" v-show="!isUpdate">Create Paket Penjualan</h1>
-                <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" v-show="isUpdate">Edit Paket Penjualan</h1>
+                <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" v-show="!isUpdate">Create Customer</h1>
+                <h1 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight" v-show="isUpdate">Edit Customer</h1>
                 <br>
                 <hr style="height:3px;color:black;background-color:black">
                 <div class="mt-6">
